@@ -21,5 +21,6 @@
         <file>renderables/skybox/skybox.fsh</file>
         <file>renderables/skybox/skybox.vsh</file>
         <file>shadereffects/shaders/skyboxreflection.glsl</file>
+        <file>renderables/cylinders/cylinders.fsh</file>
     </qresource>
 </RCC>

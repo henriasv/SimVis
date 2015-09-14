@@ -57,7 +57,7 @@ SpheresRenderer *Spheres::createRenderer()
 
 SpheresRenderer::SpheresRenderer()
 {
-    m_numberOfVBOs = 2;
+    m_vboCount = 2;
 }
 
 void SpheresRenderer::synchronize(Renderable* renderer)

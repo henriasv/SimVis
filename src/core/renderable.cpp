@@ -77,9 +77,9 @@ RenderableRenderer::RenderableRenderer()
 
 void RenderableRenderer::generateVBOs()
 {
-    if(m_numberOfVBOs>0) {
-        m_vboIds.resize(m_numberOfVBOs);
-        glFunctions()->glGenBuffers(m_numberOfVBOs, &m_vboIds.front());
+    if(m_vboCount>0) {
+        m_vboIds.resize(m_vboCount);
+        glFunctions()->glGenBuffers(m_vboCount, &m_vboIds.front());
     }
 }
 

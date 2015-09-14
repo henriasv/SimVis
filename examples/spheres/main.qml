@@ -19,7 +19,7 @@ ApplicationWindow {
         mass: 1.0
         springConstant: 0.5
         dt: 0.001
-        ballCount: 1000
+        ballCount: 1000000
     }
 
     Visualizer {
@@ -83,7 +83,7 @@ ApplicationWindow {
 
             SimplexBump {
                 id: simplexBump
-                enabled: false
+                enabled: true
                 intensity: 0.03
                 scale: 5.0
             }

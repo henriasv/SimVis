@@ -69,7 +69,8 @@ HEADERS += \
     shadereffects/skyboxreflection.h
 
 DISTFILES = qmldir \
-    core/simvisplugin.json
+    core/simvisplugin.json \
+    renderables/spheres/cylinders.fsh
 
 DESTDIR = $$OUT_PWD/../dist/SimVis
 HEADERS_DESTDIR = $$OUT_PWD/../dist/include
