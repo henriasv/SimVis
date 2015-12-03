@@ -117,7 +117,7 @@ void SpheresRenderer::synchronize(Renderable* renderer)
 }
 
 void SpheresRenderer::uploadVBONoGeometryShader(Spheres* spheres) {
-    if(!spheres->dirty() || spheres->m_positions.size() == 0) {
+    if(!spheres->dirty()) {
         return;
     }
     float scale = spheres->scale();
@@ -202,9 +202,9 @@ void SpheresRenderer::uploadVBOGeometryShader(Spheres* spheres) {
     if(!spheres->dirty()) {
         return;
     }
-    if(colors.size() < 1 || scales.size() < 1 || positions.size() < 1) {
-        return;
-    }
+//    if(colors.size() < 1 || scales.size() < 1 || positions.size() < 1) {
+//        return;
+//    }
     int numberOfVertices = positions.size();
     vertices.resize(numberOfVertices);
 
@@ -216,10 +216,6 @@ void SpheresRenderer::uploadVBOGeometryShader(Spheres* spheres) {
         vertices[i].scale = scales[i]*spheres->scale()*0.5;
     }
     spheres->setDirty(false);
-
-    if(vertices.size() < 1) {
-        return;
-    }
 
     // Transfer vertex data to VBO 0
     m_vao->bind();
